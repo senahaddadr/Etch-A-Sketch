@@ -9,6 +9,7 @@ function setDiv() {
         box.classList.add('box')
         box.textContent= "s"
         container.append(box);
+        box.addEventListener('click', () => box.classList.add('focus'))
     }
     container.style.gridTemplate = `repeat(${input}, 1fr) / repeat(${input}, 1fr)`;
 }

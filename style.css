@@ -10,9 +10,14 @@ body {
 }
 
 .box {
-    background-color: red;
+    background-color: whitesmoke;
 }
 
 .box:hover {
-    background-color: blue;
+    background-color: gray;
+
+}
+
+.focus {
+    background-color: black;
 }
