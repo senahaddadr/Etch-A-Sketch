@@ -4,13 +4,15 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #d9d9d9;
+    gap:16px
 }
 
 .container {
     display: grid;
     width: 35vw;
-    height: 35vw;
+    height: 30vw;
     overflow: hidden;
+    position: relative
 }
 
 .reset {
@@ -46,6 +48,7 @@ body {
 
 .footer {
 position: absolute;
+margin-top: 16px;
 bottom: 0;
 left: 0;
 display: flex;
