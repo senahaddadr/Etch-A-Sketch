@@ -1,4 +1,9 @@
 const container = document.querySelector('.container');
+const dimension = document.querySelector('#value')
+const slider = document.querySelector('#slider')
+let input = 16;
+setDiv()
+
 let grid = [];
 
 function makeGrid(n) {
@@ -12,15 +17,29 @@ function makeGrid(n) {
     }
 }
 
-
 function setDiv() {
     container.textContent = "";
     let input = document.getElementById("slider").value
-    if (input > 100 || input < 1 || input == NaN) {
-        alert ('Wrong input! Try again.')
-        let input = window.prompt('How many squares per side?')
-        makeGrid(input)
-    } else {makeGrid(input)}
+    makeGrid(input)
 }
 
+function updateValue(value) {
+    dimension.innerHTML = `${value} x ${value}`
+}
+
+function updateSize(value) {
+    updateValue(value)
+    setDiv()
+}
+
+function reset() {
+    container.textContent = "";
+    setDiv()
+}
+
+slider.onmousemove = (e) => updateValue(e.target.value)
+slider.onchange = (e) => updateSize(e.target.value)
 document.querySelector('#slider').onclick = setDiv;
+document.querySelector('.reset').onclick = reset;
+
+console.log(value)
