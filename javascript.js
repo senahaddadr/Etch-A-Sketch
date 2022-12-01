@@ -15,7 +15,7 @@ function makeGrid(n) {
 
 function setDiv() {
     container.textContent = "";
-    let input = window.prompt('How many squares per side?')
+    let input = document.getElementById("slider").value
     if (input > 100 || input < 1 || input == NaN) {
         alert ('Wrong input! Try again.')
         let input = window.prompt('How many squares per side?')
@@ -23,4 +23,4 @@ function setDiv() {
     } else {makeGrid(input)}
 }
 
-document.querySelector('#userInput').onclick = setDiv;
+document.querySelector('#slider').onclick = setDiv;
